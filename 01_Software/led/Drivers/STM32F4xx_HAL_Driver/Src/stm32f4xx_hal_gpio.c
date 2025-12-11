@@ -192,14 +192,14 @@ void HAL_GPIO_Init(GPIO_TypeDef  *GPIOx, GPIO_InitTypeDef *GPIO_Init)
         assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));
         /* Configure the IO Speed */
         temp = GPIOx->OSPEEDR; 
-        temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U));
-        temp |= (GPIO_Init->Speed << (position * 2U));
+        temp &= ~(GPIO_OSPEEDER_OSPEEDR0 << (position * 2U)); // temp &= ~(0x3 << (position * 2U));
+        temp |= (GPIO_Init->Speed << (position * 2U));  // temp |= (speed << (position * 2U));
         GPIOx->OSPEEDR = temp;
 
         /* Configure the IO Output Type */
         temp = GPIOx->OTYPER;
-        temp &= ~(GPIO_OTYPER_OT_0 << position) ;
-        temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position);
+        temp &= ~(GPIO_OTYPER_OT_0 << position) ; // temp &= ~(0x1 << position);
+        temp |= (((GPIO_Init->Mode & OUTPUT_TYPE) >> OUTPUT_TYPE_Pos) << position); // temp |= (output_type << position);
         GPIOx->OTYPER = temp;
        }
 
