@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "adc.h": "c",
+        "main.h": "c",
+        "iwdg.h": "c",
+        "climits": "c",
+        "cmath": "c",
+        "cstdarg": "c",
+        "cstdio": "c",
+        "cstdlib": "c",
+        "bsp_display_driver.h": "c",
+        "bsp_wdt.h": "c",
+        "bsp_driver_wdt.h": "c",
+        "compare": "c",
+        "exception": "c",
+        "new": "c",
+        "type_traits": "c",
+        "typeinfo": "c",
+        "concepts": "c",
+        "limits": "c",
+        "stdbool.h": "c"
+    },
+    "commentTranslate.source": "Bing"
+}
