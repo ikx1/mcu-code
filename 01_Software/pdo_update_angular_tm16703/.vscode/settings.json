@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "adc.h": "c",
+        "bsp_can_handler.h": "c",
+        "queue.h": "c",
+        "stdbool.h": "c"
+    }
+}

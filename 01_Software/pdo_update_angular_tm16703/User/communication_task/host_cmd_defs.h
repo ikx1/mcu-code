@@ -1,0 +1,28 @@
+#ifndef HOST_CMD_DEFS_H
+#define HOST_CMD_DEFS_H
+
+#define UART_TASK_FRAME_TYPE_TELEMETRY 0x01u
+#define UART_TASK_FRAME_TYPE_COMMAND  0x81u
+
+#define UART_TASK_BYTE_ORDER_LITTLE   0u
+#define UART_TASK_BYTE_ORDER_BIG      1u
+
+#ifndef UART_TASK_COMMAND_BYTE_ORDER
+#define UART_TASK_COMMAND_BYTE_ORDER  UART_TASK_BYTE_ORDER_LITTLE
+#endif
+
+/* Drive command contract:
+ * tag 0x01 and tag 0x02 must appear together in the same command frame.
+ */
+#define UART_TASK_TAG_LEFT_WHEEL_ANGULAR_MRAD_S   0x01u
+#define UART_TASK_TAG_RIGHT_WHEEL_ANGULAR_MRAD_S  0x02u
+#define UART_TASK_TAG_Z_LIFT_MM         0x03u
+#define UART_TASK_TAG_BUCKET_VOLUME_ML  0x04u
+#define UART_TASK_TAG_STATUS_MASK     0x11u
+#define UART_TASK_TAG_STATUS_VALUE    0x12u
+#define UART_TASK_TAG_STATUS_WORD     0x13u
+#define UART_TASK_TAG_HEALTH_WORD     0x14u
+#define UART_TASK_TAG_ALARM_INFO      0x15u
+#define UART_TASK_TAG_BATT_SOC_X100   0x21u
+
+#endif /* HOST_CMD_DEFS_H */

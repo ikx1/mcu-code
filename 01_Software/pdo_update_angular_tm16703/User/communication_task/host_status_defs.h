@@ -1,0 +1,21 @@
+#ifndef __HOST_STATUS_DEFS_H__
+#define __HOST_STATUS_DEFS_H__
+
+#include <stdint.h>
+
+#define ROBOT_RESET_RIGHT_BIT          0x01u
+#define ROBOT_RESET_LEFT_BIT           0x02u
+#define ROBOT_RESET_JOINT_BIT          0x04u
+
+#define HOST_STATUS_RIGHT_ENABLE_SHIFT   0u
+#define HOST_STATUS_RIGHT_RESET_BIT      2u
+#define HOST_STATUS_LEFT_ENABLE_SHIFT    3u
+#define HOST_STATUS_LEFT_RESET_BIT       5u
+#define HOST_STATUS_JOINT_ENABLE_SHIFT   6u
+#define HOST_STATUS_JOINT_RESET_BIT      8u
+#define HOST_STATUS_SPRAY_ON_BIT         12u
+#define HOST_STATUS_DRAIN_ON_BIT         13u
+#define HOST_STATUS_CHARGING_ON_BIT      14u
+#define HOST_STATUS_GRIPPER_CLOSED_BIT   15u
+
+#endif /* __HOST_STATUS_DEFS_H__ */
